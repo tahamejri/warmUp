@@ -3,10 +3,24 @@
  mult(3); // => 6
  mult(4); // => 24
  function mult(n) {
- // your code is here
+ 	var result = 1 ;
+ 	for(var i = 1; i<=n; i++){
+ 		result*= i ;
+ 	}
+ 	return result ;
 }
 
 // 2- Use a while loop to build a single string with the numbers 1 through n
 // separated by the number next to the current number. 
 //Have it return the new string.
 // eg= 1 2 2 3 3 4 4 5 5 6 6 ...
+
+function string1ToN(num){
+	var count = 2 ;
+	var outStr = '1' ;
+	while(count<=num){
+		outStr += ' ' +count +' '+count ;
+		count++ ;
+	}
+	return outStr ;
+}
