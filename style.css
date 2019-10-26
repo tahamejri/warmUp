@@ -1,0 +1,25 @@
+body {
+	background-color: blue ; 
+	padding: 10px ;
+}
+img {
+	width : 500px;
+	height: auto ;
+}
+
+#firstB {
+	font-family: cursive ;
+}
+#secondB {
+	font-family: fangsong;
+}
+
+li {
+	margin-top:  20px;
+	font-size: 40px ;
+	font-weight: solid ;
+	font-color : black;
+}
+ footer {
+ 	margin-top: 10px;
+ }
