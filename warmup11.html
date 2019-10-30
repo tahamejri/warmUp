@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>warmup 11</title>
+
+	<link rel="stylesheet" type="text/css" href="warmupCss11.css">
+
+	
+</head>
+<body>
+	
+	<script
+  	src="https://code.jquery.com/jquery-3.4.1.js"
+  	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  	crossorigin="anonymous">
+	</script>
+
+
+<button id='rightButton'>Right</button>
+<button id='leftButton'>Left</button> <br>
+<button id ='createButton'>Create</button>
+
+
+<div>
+LEFT
+<ul id ='leftList' >
+	
+</ul>
+</div>
+
+<div>
+Right
+<ul id ='rightList'></ul>
+
+</div>
+
+
+<script type="text/javascript" href = "warmupJS11.js"></script>
+
+
+
+
+<script type="text/javascript">
+
+
+var side = '' ;
+$('#rightButton').on('click', function(){
+	side = 'right' ;
+})
+
+$('#leftButton').on('click', function(){
+	side = 'left'
+})
+
+
+
+$('#createButton').on('click', function(){
+	if(side === 'right'){
+		$('#rightList').append('<li></li>') ;
+	}
+	else if(side === 'left'){
+		$('#leftList').append('<li></li>') ;
+	}
+})
+</script>
+
+</body>
+</html>

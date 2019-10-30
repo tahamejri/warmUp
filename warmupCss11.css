@@ -1,0 +1,14 @@
+button{
+	width: 90px;
+	height: auto ;
+}
+#createButton{
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+
+#lists{
+	align-content: start;
+	border:solid;
+}
