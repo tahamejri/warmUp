@@ -5,7 +5,6 @@
         Example:
 
             solution('XXI'); // should return 21
-
         Help:
 
             Symbol    Value
@@ -16,7 +15,29 @@
             C          100
             D          500
             M          1,000 
-    
+    */
+
+    function romanToDec(str){
+   	var roman = {   'I':  1 ,
+     'V': 5 ,
+     'X': 10 ,
+     'L': 50,
+     'C': 100 ,
+     'D': 500 ,
+     'M': 1000
+ }
+
+
+     decomposed = str.split('') ;
+    	return decomposed.reduce(function(acc, element){
+    		acc+= roman[element] ;
+    		return acc ;
+    	},0)
+
+    }
+
+
+    /*
     2. Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
         Examples:
 
@@ -24,6 +45,36 @@
 
         toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior"
     
+
+    */
+    function toCamelCase(str){
+    	if(str.indexOf('-') !== -1 ){
+    		var array= str.split('-') ;
+    	}
+    	if(str.indexOf('_') !== -1 ){
+    		var array= str.split('_') ;
+    	}
+
+    	// for(var i = 0; i<array.length; i++){
+    	// 	array[i][0] = array[i][0].toUpperCase() ; 
+    		
+    	// }
+
+    	return array.map(function(element){
+
+    		 var elemArr = element.split('') ;
+    		 var first = elemArr[0] ;
+    		 elemArr.splice(0, 1) ;
+    		 elemArr.unshift(first.toUpperCase());
+    		 element = elemArr.join('') ;
+   			
+    		 return element
+    	})
+    	 
+    }
+
+
+    /*
     3. In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
         Example
 
@@ -31,3 +82,9 @@
             filter_list([1,'a','b',0,15]) == [1,0,15]
             filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 */
+
+function filter_list(arr){
+	return arr.filter(function(element){
+		return Number.isInteger(element) ;
+	})
+}
