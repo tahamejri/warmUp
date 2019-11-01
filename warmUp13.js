@@ -6,6 +6,7 @@
 
             solution('XXI'); // should return 21
         Help:
+        MCMXC" (1000 = M, 900 = CM, 90 = XC)
 
             Symbol    Value
             I          1
@@ -26,16 +27,20 @@
      'D': 500 ,
      'M': 1000
  }
-
-
-     decomposed = str.split('') ;
-    	return decomposed.reduce(function(acc, element){
-    		acc+= roman[element] ;
-    		return acc ;
-    	},0)
-
+    var decomposed = str.split('') ;
+    var result = 0
+    for(var i = 0; i<decomposed.length; i++){
+    	if(roman[decompose[i]]<roman[decompose[i+1]]){
+      	result += roman[decompose[i+1]] - roman[decompose[i]] ;
+        	i++;
+        }
+        else{ 
+          result += roman[decompose[i]]
+        }
     }
-
+    return result ; 
+    }
+    
 
     /*
     2. Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
@@ -55,10 +60,6 @@
     		var array= str.split('_') ;
     	}
 
-    	// for(var i = 0; i<array.length; i++){
-    	// 	array[i][0] = array[i][0].toUpperCase() ; 
-    		
-    	// }
 
     	return array.map(function(element){
 
