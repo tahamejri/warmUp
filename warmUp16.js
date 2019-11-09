@@ -16,3 +16,36 @@
 // Constraints:
 // 1 <= text.length <= 10^4
 // text consists of lower case English letters only.
+
+//sorry it looks awefull but it works
+
+function howManyBaloons (str){
+	var arr = str.split('') ;
+	var balarr = 'baloon'.split('') ;
+	var baloonword = '' ;
+	var count = 0 ;
+
+	for(var i = 0; i<balarr.length; i++){
+	arr.forEach(function(element,index){
+		if(element === balarr[i]) {
+			baloonword += arr.splice(index,1) ;
+			if (baloonword === 'baloon'){
+				count++ ;
+				baloonword = '' ;
+			}
+		}
+
+		}
+		)
+	}
+var x = 0 ;
+
+x = baloonword.length / 6 ;
+if(x>=1){
+return Math.floor(x) ;
+}
+else{
+	return count ;
+}
+}
+

@@ -10,3 +10,20 @@
 
 // input   =  "aaaaaaaaaaaa"
 // result  =  "123456789101112"
+
+function numofOcc(str){
+	var countArr=[] ;
+	var arrstr= str.split('') ;
+
+	for(var i=0; i<arrstr.length; i++){
+		var count = 0;
+		for(var j = i;j>=0;j--){
+			if(arrstr[i]===arrstr[j]){
+				count++ ;
+			}
+		}
+		countArr.push(count)
+
+	}
+	return countArr.join('')
+}
