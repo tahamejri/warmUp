@@ -27,6 +27,12 @@
 
 // ​
 // ​
-// var calculateTime = function(keyboard, word) {
-    
-// };
+var calculateTime = function(keyboard, word) {
+    var splitedWord = word.split('') ;
+    var keyboardArr = keyboard.split('') ;
+    var result =  Math.abs(0-keyboardArr.indexOf(splitedWord[0]));
+    for(var i = 0; i < splitedWord.length -1; i++){
+    	result+= Math.abs(keyboardArr.indexOf(splitedWord[i]) - keyboardArr.indexOf(splitedWord[i+1]))
+    }
+    return result ;
+};
